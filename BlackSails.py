@@ -8,7 +8,7 @@ import Live
 
 transport_play_button = None
 transport_stop_button = None
-# record_button = None
+# transport_record_button = None
 
 from _Framework.ControlSurface import ControlSurface
 from _Framework.SessionComponent import SessionComponent
@@ -22,7 +22,7 @@ class BlackSails(ControlSurface):
             self._configure_transport_buttons()
             self._make_transport()
 
-        # would like the try to see if the following code works
+        # VVV would like the try to see if the following code works VVV
 
         # client = OSCClient()
         # client.connect(("127.0.0.1", 5555))
@@ -50,15 +50,15 @@ class BlackSails(ControlSurface):
         transport_play_button = ButtonElement(False, 0, 10, 0)
         global transport_stop_button
         transport_stop_button = ButtonElement(False, 0, 10, 1)
-        # global record_button
-        # record_button = ButtonElement(False, 0, 10, 2)
+        # global transport_record_button
+        # transport_record_button = ButtonElement(False, 0, 10, 2)
 
 
     def _make_transport(self):
         transport = TransportComponent()
         transport.set_play_button(transport_play_button)
         transport.set_stop_button(transport_stop_button)
-        # transport.set_record_button(record_button)
+        # transport.set_record_button(transport_record_button)
 
 
     def _configure_sesssion_box_buttons(self):
