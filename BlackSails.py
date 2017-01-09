@@ -19,16 +19,16 @@ class BlackSails(ControlSurface):
     def __init__(self, c_instance):
         ControlSurface.__init__(self, c_instance)
         with self.component_guard():
-            # self.session = SessionComponent(5, 1)
-            # self.session.set_offsets(0, 0)
-            # self.session.scene(0).clip_slot(0).set_launch_button(ButtonElement(False, 1, 6, 2))
-            # self.session.scene(0).clip_slot(1).set_launch_button(ButtonElement(False, 0, 6, 0))
-            # self.set_highlighting_session_component(self.session)
             self._configure_transport_buttons()
             self._make_transport()
 
+        # would like the try to see if the following code works
+
         # client = OSCClient()
         # client.connect(("127.0.0.1", 5555))
+        #
+        # with self.compontent_guard():
+        #     self._make_session_box(16, 16)
 
         # client.send(OSCMessage("/hello"))
 
@@ -64,7 +64,7 @@ class BlackSails(ControlSurface):
     def _configure_sesssion_box_buttons(self):
         pass
 
-    def _create_session_box(self, scenes, tracks):
+    def _make_session_box(self, scenes, tracks):
         self.session = SessionComponent(scenes, tracks)
         self.session.set_offsets(0, 0)
         # self.session.scene(0).clip_slot(0).set_launch_button(ButtonElement(False, 1, 6, 2))
