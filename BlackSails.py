@@ -13,7 +13,7 @@ transport_stop_button = None
 from _Framework.ControlSurface import ControlSurface
 from _Framework.SessionComponent import SessionComponent
 from _Framework.ButtonElement import ButtonElement
-from _Framework.ButtonElement import TransportComponent
+from _Framework.TransportComponent import TransportComponent
 
 class BlackSails(ControlSurface):
     def __init__(self, c_instance):
